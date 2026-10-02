@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS Corp | Plataforma de Gestión</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- TODO: Migrar a React en Q3 2026 -->
+    <!-- API Base: /api/v2/ -->
+</head>
+<body>
+    <nav>
+        <div class="logo">NEXUS</div>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/about">Nosotros</a></li>
+            <li><a href="/contact">Contacto</a></li>
+            <li><a href="/login">Acceso</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Bienvenido a NEXUS Corp</h1>
+        <p>Plataforma integral de gestión empresarial.</p>
+        <p>Estado del sistema: <span id="status">Verificando...</span></p>
+    </main>
+    <script>
+        fetch('/api/health')
+            .then(r => r.json())
+            .then(d => document.getElementById('status').textContent = d.status)
+            .catch(() => document.getElementById('status').textContent = 'Error');
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+    "version": 2,
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                { "key": "X-Content-Type-Options", "value": "nosniff" },
+                { "key": "X-Frame-Options", "value": "DENY" },
+                { "key": "X-XSS-Protection", "value": "1; mode=block" },
+                { "key": "Server", "value": "NexusEdge/2.1" }
+            ]
+        }
+    ],
+    "routes": [
+        { "src": "/admin(/.*)?", "status": 403, "dest": "/403.html" },
+        { "src": "/backup(/.*)?", "status": 403, "dest": "/403.html" },
+        { "src": "/config(/.*)?", "status": 403, "dest": "/403.html" },
+        { "src": "/internal(/.*)?", "status": 403, "dest": "/403.html" },
+        { "src": "/\\.env(.*)", "status": 403, "dest": "/403.html" },
+        { "src": "/\\.git(/.*)?", "status": 403, "dest": "/403.html" },
+        { "src": "/\\.hidden(/.*)?", "status": 403, "dest": "/403.html" },
+        { "src": "/wp-admin(/.*)?", "status": 403, "dest": "/403.html" },
+        { "src": "/wp-login(/.*)?", "status": 403, "dest": "/403.html" },
+        { "src": "/phpinfo\\.php", "status": 403, "dest": "/403.html" },
+        { "src": "/cgi-bin(/.*)?", "status": 403, "dest": "/403.html" },
+        { "src": "/server-status", "status": 403, "dest": "/403.html" },
+        { "src": "/server-info", "status": 403, "dest": "/403.html" },
+        { "src": "/old-site", "status": 301, "dest": "/" },
+        { "src": "/blog", "status": 301, "dest": "/" },
+        { "src": "/api/health", "dest": "/api/health.json" },
+        { "src": "/api/users", "dest": "/api/users.json" },
+        { "src": "/login", "dest": "/login.html" }
+    ]
+}

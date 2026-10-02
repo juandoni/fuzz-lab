@@ -1,0 +1,9 @@
+{
+    "app_name": "NEXUS Corp",
+    "debug": false,
+    "secret_key": "NXS-DEV-KEY-2026-REPLACE-IN-PROD",
+    "database_url": "postgresql://nexus:password123@db.internal:5432/nexus_prod",
+    "redis_url": "redis://cache.internal:6379",
+    "smtp_host": "smtp.nexus-corp.local",
+    "api_rate_limit": 1000
+}

@@ -1,0 +1,7 @@
+{
+    "users": [
+        {"id": 1, "name": "admin", "role": "superadmin", "email": "admin@nexus-corp.local"},
+        {"id": 2, "name": "jdoni", "role": "sysadmin", "email": "jdoni@nexus-corp.local"},
+        {"id": 3, "name": "guest", "role": "readonly", "email": "guest@nexus-corp.local"}
+    ]
+}

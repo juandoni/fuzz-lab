@@ -1,0 +1,8 @@
+{
+    "server": "prod-web-01",
+    "cpu_usage": "23%",
+    "memory_usage": "4.2GB/16GB",
+    "active_connections": 1247,
+    "error_rate": "0.02%",
+    "last_deploy": "2026-10-01T14:30:00Z"
+}

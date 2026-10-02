@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /backup/
+Disallow: /config/
+Disallow: /internal/
+Disallow: /.hidden/
+Allow: /
+Sitemap: https://nexus-corp.vercel.app/sitemap.xml
